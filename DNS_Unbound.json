@@ -1,0 +1,2492 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Painel com dados de desempenho e de status do Servidor de DNS, que roda unbound.",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 15,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "uQswoePVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 0,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "System uptime"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "System Uptime",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "uQswoePVz"
+      },
+      "description": "unbound é o processo do DNS",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "semi-dark-red",
+                  "index": 0,
+                  "text": "Parado!"
+                },
+                "1": {
+                  "color": "semi-dark-green",
+                  "index": 1,
+                  "text": "RODANDO"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          },
+          "unit": "dtdurationms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 3,
+        "y": 0
+      },
+      "id": 12,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "Unbound service"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Unbound Status",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "uQswoePVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 70
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "dtdurationms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 3,
+        "x": 7,
+        "y": 0
+      },
+      "id": 7,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "10.0.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "UsedSpace"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "CPU utilization"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "DNS CPU Use",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "uQswoePVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 70
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "dtdurationms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 3,
+        "x": 10,
+        "y": 0
+      },
+      "id": 8,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "10.0.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Usada"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "Memory utilization"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "DNS Memory Use",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "uQswoePVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "dtdurationms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 5,
+        "x": 13,
+        "y": 0
+      },
+      "id": 10,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "10.0.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Down ⬇️"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "Interface ens18: Bits received"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Up ⬆️"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "Interface ens18: Bits sent"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "DNS Tráfego de Rede",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "uQswoePVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 50,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "dtdurationms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 18,
+        "y": 0
+      },
+      "id": 11,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "10.0.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Download"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "Interface ens18: Bits received"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Transform",
+                "defaultParams": [
+                  100
+                ],
+                "name": "scale",
+                "params": [
+                  {
+                    "name": "factor",
+                    "options": [
+                      100,
+                      0.01,
+                      10,
+                      -1
+                    ],
+                    "type": "float"
+                  }
+                ]
+              },
+              "params": [
+                "-1"
+              ],
+              "text": "scale(100)"
+            },
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Upload"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "Interface ens18: Bits sent"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "DNS Tráfego de Rede Graf",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "uQswoePVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "unit": "dtdurationms"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "UsedSpace"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 3,
+        "y": 3
+      },
+      "id": 6,
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true,
+          "values": [
+            "value"
+          ]
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "10.0.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Total"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "/: Total space"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Usado"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "/: Used space"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "DNS Uptime",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "uQswoePVz"
+      },
+      "description": "unbound é o processo do DNS",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          },
+          "unit": "dtdurationms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 0,
+        "y": 4
+      },
+      "id": 5,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "Unbound Uptime"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Unbound Uptime",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "uQswoePVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "dashed"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 80
+              },
+              {
+                "color": "red",
+                "value": 90
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 7
+      },
+      "id": 1,
+      "options": {
+        "legend": {
+          "calcs": [
+            "last",
+            "max",
+            "mean"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "CPU utilization"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "CPU Utilization",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "uQswoePVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 50,
+            "gradientMode": "hue",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "dashed"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 7
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [
+            "last",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "CPU guest nice time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "CPU guest time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "CPU idle time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "CPU interrupt time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "CPU iowait time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "E",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "CPU nice time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "F",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "CPU softirq time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "G",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "CPU steal time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "H",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "CPU system time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "I",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "CPU user time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "J",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "CPU Detalization",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "uQswoePVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "dashed"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 3250000000
+              },
+              {
+                "color": "red",
+                "value": 3500000000
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 0,
+        "y": 16
+      },
+      "id": 3,
+      "options": {
+        "legend": {
+          "calcs": [
+            "last",
+            "max",
+            "mean"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Memória Disponível"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "Total memory"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Memória Usada"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "Memory utilization"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Memory Utilization",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "uQswoePVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "dashed"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 3250000000
+              },
+              {
+                "color": "red",
+                "value": 3500000000
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 12,
+        "y": 16
+      },
+      "id": 9,
+      "options": {
+        "legend": {
+          "calcs": [
+            "last",
+            "max",
+            "mean"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Memória Disponível"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "Total memory"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "uQswoePVz"
+          },
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Memória Usada"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "Linux servers"
+          },
+          "hide": false,
+          "host": {
+            "filter": "dnsUnbound"
+          },
+          "item": {
+            "filter": "Memory utilization"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Memory Utilization",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "1m",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [
+    "dns",
+    "server"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-24h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "DNS Unbound",
+  "uid": "e141d615-69f8-4a33-a8c5-a1254ec3628b",
+  "version": 7,
+  "weekStart": ""
+}
